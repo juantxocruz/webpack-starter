@@ -1,6 +1,4 @@
-# Club de Madrid Webpack Frontend
-
-[![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)
+# Webpack 5 Frontend Starterkit
 
 A lightweight foundation for your next webpack based frontend project.
 
