@@ -3,11 +3,19 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// in package.json build script
+// the public route to the asset folder
+// for building purposes
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
+
 module.exports = {
+  mode: 'none',
   entry: {
     app: Path.resolve(__dirname, '../src/scripts/index.js'),
   },
   output: {
+    publicPath: ASSET_PATH,
     path: Path.join(__dirname, '../build'),
     filename: 'js/[name].js',
   },
@@ -26,6 +34,7 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/index.html'),
       favicon: Path.resolve(__dirname, '../src/favicon.ico'),
     }),
+
 
   ],
   resolve: {
